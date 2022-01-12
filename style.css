@@ -1,0 +1,340 @@
+:root {
+    --white: #FFFFFF;
+    --bg-color: #F3F3F3;
+    --light-grey: #777777;
+    --grey: #333333;
+    --red: #C72727;
+    --orange: #F99500;
+    --purple: #A66BBE;
+    --blue: #049DFF;
+
+    --big-size: 2rem;
+    --normal-size: 1.2rem;
+    --small-size: 0.7rem;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-color);
+    font-family: Arial, Helvetica, sans-serif
+}
+
+/*--------------- NAV ---------------*/
+nav {
+    background-color: var(--white);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 15%;
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    margin: auto;
+    z-index: 1;
+}
+
+/* logo */
+.logo img {
+    width: 200px;
+}
+
+/* Social */
+.social {
+    margin-left: 300px;
+}
+
+.social i {
+    color: var(--light-grey);
+    margin-right: 5px;
+}
+
+/* menu */
+.menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu p {
+    color: var(--grey);
+    font-size: var(--normal-size);
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.menu p:first-child {
+    display: block;
+    margin-right: 10px;
+    padding: 15px;
+    background-color: var(--red);
+    color: var(--white)
+}
+
+/*--------------- HEADER ---------------*/
+
+header {
+    height: 650px;
+    width: 100%;
+    border: 1px solid black;
+    position: relative;
+}
+
+header::before {
+    content: "";
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background-image: url('./images/featured.jpg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -1;
+    filter: contrast(0.6) brightness(0.8);
+}
+
+.showcase {
+    width: 70%;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.tag-small {
+    font-size: var(--small-size);
+    color: var(--white);
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 25px;
+}
+
+.showcase p:nth-child(1) {
+    background-color: var(--orange);
+}
+
+.showcase h1 {
+    font-size: var(--big-size);
+    color: var(--white);
+    margin-bottom: 20px;
+}
+
+.showcase p:nth-child(3) {
+    width: 600px;
+    font-size: var(--normal-size);
+    color: var(--white);
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.showcase button {
+    background-color: var(--red);
+    color: var(--white);
+    width: 150px;
+    font-size: var(--normal-size);
+    padding: 15px 20px;
+    border: none;
+}
+
+/*--------------- GRID Section ---------------*/
+section {
+    padding: 40px;
+    width: 70%;
+    margin: auto;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+section h1 {
+    margin-bottom: 10px;
+}
+
+section .grid {
+    width: 100%;
+    padding: 20px;
+    background-color: var(--bg-color);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+}
+
+section .card-h-small {
+    height: 250px;
+    background-color: var(--white);
+    padding: 20px;
+    overflow: hidden;
+}
+
+section .card-h-large {
+    height: 500px;
+    background-color: var(--white);
+    padding: 20px;
+    overflow: hidden;
+}
+
+section .grid .card-title {
+    font-size: var(--normal-size);
+    color: var(--grey);
+    text-align: left;
+    padding-bottom: 10px;
+}
+
+section .grid .card-text {
+    font-size: var(--normal-size);
+    color: var(--grey);
+    text-align: left;
+    line-height: 1.2;
+}
+
+/* CARDS */
+section .grid .card1 {
+    grid-area: 1 / 1 / 2 / 3;
+}
+
+section .grid .card2 {
+    grid-area: 1 / 3 / 2 / 4;
+    background-color: var(--grey);
+}
+
+section .grid .card3 {
+    grid-area: 2 / 1 / 4 / 2;
+}
+
+section .grid .card4 {
+    grid-area: 2 / 2 / 4 / 3;
+}
+
+section .grid .card5 {
+    grid-area: 2 / 3 / 4 / 4;
+
+}
+
+section .grid .card6 {
+    grid-area: 4 / 1 / 5 / 2;
+    background-color: var(--red);
+}
+
+section .grid .card7 {
+    grid-area: 4 / 2 / 5 / 4;
+}
+
+/* Card body */
+section .grid .card1,
+section .grid .card7 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section .grid .card3,
+section .grid .card4,
+section .grid .card5 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+section .grid .card2,
+section .grid .card6 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+/* Card image */
+section .grid .card1 img,
+section .grid .card7 img {
+    height: 100%;
+    flex: 1;
+}
+
+section .grid .card3 img,
+section .grid .card4 img,
+section .grid .card5 img {
+    width: 100%;
+    flex: 1;
+}
+
+/* Card Tag */
+
+section .grid .card1 P:first-child,
+section .grid .card7 P:first-child {
+    display: inline-block;
+    background-color: var(--purple);
+}
+
+section .grid .card3 P:first-child,
+section .grid .card5 P:first-child {
+    display: inline-block;
+    background-color: var(--blue);
+}
+
+section .grid .card2 P:first-child,
+section .grid .card4 P:first-child,
+section .grid .card6 P:first-child {
+    display: inline-block;
+    background-color: var(--orange);
+}
+
+/* Card Content */
+
+section .grid .card1 .content,
+section .grid .card7 .content {
+    height: 100%;
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+section .grid .card3 .content,
+section .grid .card4 .content,
+section .grid .card5 .content {
+    height: 100%;
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+section .grid .card2 .content,
+section .grid .card6 .content {
+    height: 100%;
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+section .grid .card2 .content>*,
+section .grid .card6 .content>* {
+    color: var(--white);
+}
+
+/*--------------- FOOTER ---------------*/
+
+footer {
+    width: 100%;
+    height: 400px;
+    background-color: var(--grey);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
