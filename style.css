@@ -354,10 +354,6 @@ footer .content {
 
 footer .content>* {
     flex: 1;
-}
-
-/* Col 1 */
-footer .content .col1 {
     padding: 0 20px 20px 20px;
     display: flex;
     flex-direction: column;
@@ -365,6 +361,7 @@ footer .content .col1 {
     align-items: flex-start;
 }
 
+/* Col 1 */
 footer .content .col1 img {
     width: 150px;
     margin-bottom: 20px;
@@ -377,14 +374,6 @@ footer .content .col1 p {
 }
 
 /* Col 2 */
-footer .content .col2 {
-    padding: 0 20px 20px 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-}
-
 footer .content .col2 h1 {
     font-size: 1.2rem;
     color: var(--white);
@@ -427,14 +416,6 @@ footer .content .col2 button {
 }
 
 /* Col 3 */
-footer .content .col3 {
-    padding: 0 20px 20px 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-}
-
 footer .content .col3 h1 {
     font-size: 1.2rem;
     color: var(--white);
@@ -457,14 +438,6 @@ footer .content .col3 ul li {
 }
 
 /* Col 4 */
-footer .content .col4 {
-    padding: 0 20px 20px 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-}
-
 footer .content .col4 h1 {
     font-size: 1.2rem;
     color: var(--white);
