@@ -498,15 +498,15 @@ footer .copyright p {
   grid-column-end: 3;
   grid-row-start: 1;
   grid-row-end: 2;
+  height: 85%;
 }
 
 #about-organization p {
   margin-bottom: 1em;
 }
 
-#about-organization h1,
-h3 {
-  font-weight: bold;
+.txt-bold {
+  font-weight: 100;
 }
 
 #join-our-club > h3,
@@ -529,9 +529,15 @@ p {
 }
 
 /*--------------------------------- Responsive About ---------------------------------*/
+/* Tablets */
+@media only screen and (max-width: 1200px) {
+  #join-our-club {
+    height: 60%;
+  }
+}
 
-/* @media only screen and (min-width: 600px) {
-
+/* Smartphones */
+@media only screen and (max-width: 600px) {
   #news-grid {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr;
@@ -544,6 +550,7 @@ p {
     grid-column-end: 1;
     grid-row-start: 1;
     grid-row-end: 2;
+    margin-bottom: 1em;
   }
 
   #join-our-club {
@@ -553,6 +560,6 @@ p {
     grid-column-end: 1;
     grid-row-start: 2;
     grid-row-end: 2;
-    height: 21.66%;
+    height: 9%;
   }
-} */
+}
