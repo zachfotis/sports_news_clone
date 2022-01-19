@@ -93,10 +93,12 @@ header::before {
     height: 100%;
     width: 100%;
     position: absolute;
-    background-image: url('./images/featured.jpg');
+    background: url('./images/featured.jpg') no-repeat center center/cover;
+
+    /* background-image: url('./images/featured.jpg') ;
     background-position: center center;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: cover; */
     z-index: -1;
     filter: contrast(0.6) brightness(0.8);
 }
